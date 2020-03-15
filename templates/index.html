@@ -1,0 +1,52 @@
+{% include "util/frameworks.html" %}
+{% include "util/modals.html" %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+
+
+<title>Total Voice - API</title>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                <span class="font-weight-bold" style="font-size: larger;">Total Voice
+                    <br>
+                    Opções</span>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="{{'#modal_chamadas'}}">
+                        Chamadas
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="{{'#modal_sms'}}">
+                        SMS
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <button type="button" class="btn btn-dark " data-toggle="modal" data-target="#" disabled>
+                        Audio
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="{{'#modal_tts'}}">
+                        TTS
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+
+        {% if alerta != None %}
+        <script>alert("{{alerta}}")</script>
+        {% endif %}
+
+</body>

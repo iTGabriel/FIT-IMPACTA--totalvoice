@@ -1,0 +1,37 @@
+<div class="modal fade" id="modal_tts_criar" tabindex="1" role="dialog" aria-labelledby="modal_tts_criar_label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title m-auto " id="modal_tts_criar_label">Criar - TTS</h5>
+                <!-- <button type="button" class="close justify-content-end" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+            </div>
+
+            <div class="modal-body">
+
+                <form action="{{ url_for('enviar_mensagem_deaudio') }}" method="POST">
+                    <div class="form-group">
+                        <label for="numero_destino">Número para ser enviado a mensagem em audio</label>
+                        <input type="text" class="form-control" name="numero_destino" id="numero_destino"
+                            placeholder="Informe o número que estará receberá a mensagem em audio">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="tts_txt">Texto</label>
+                        <textarea class="form-control" name="tts_txt" id="tts_txt" minlength="7" maxlength="300"
+                            style="resize: none; min-height: 160px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-left: 42%;">Enviar</button>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary m-auto" data-dismiss="modal">Fechar/Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
