@@ -10,16 +10,18 @@
             </div>
 
             <div class="modal-body">
-                <form>
+                <form action="{{ url_for('enviar_sms') }}" method="POST">
                     <div class="form-group">
                         <label for="numero_destino">Número para ser enviado a mensagem</label>
-                        <input type="text" class="form-control" id="numero_destino"
+                        <input type="text" class="form-control" name="numero_destino" id="numero_destino"
                             placeholder="Informe o número que estará receberá a mensagem">
                     </div>
 
 
                     <div class="form-group">
                         <label for="sms_txt">Texto</label>
+                        <!-- <input type="text" class="form-control" name="sms_txt" id="sms_txt"> -->
+                        
                         <textarea class="form-control" name="sms_txt" id="sms_txt" minlength="7" maxlength="300"
                             style="resize: none; min-height: 160px;"></textarea>
                     </div>
@@ -29,7 +31,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary m-auto" data-dismiss="modal">Fechar/Cancelar</button>
+                <button type="button" class="btn btn-danger m-auto" data-dismiss="modal">Fechar/Cancelar</button>
             </div>
         </div>
 
